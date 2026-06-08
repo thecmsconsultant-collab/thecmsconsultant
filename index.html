@@ -807,6 +807,23 @@ footer {
   box-shadow: 0 2px 12px rgba(0,0,0,0.12);
 }
 
+.profile-avatar-initials {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 4px solid white;
+  background: var(--accent);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Fraunces", serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.12);
+  letter-spacing: 0.02em;
+}
+
 .profile-body {
   padding: 12px 24px 28px;
 }
@@ -1190,10 +1207,7 @@ footer {
       <div class="profile-card">
         <div class="profile-banner"></div>
         <div class="profile-avatar-wrap">
-          <img
-            src="https://gravatar.com/avatar/4b91eb6146136e5ddcbf2c10fc16d9b4659e3cbb57d54ce27a019251dce7ac52?s=160&d=mp"
-            alt="Chadwick Teate"
-            class="profile-avatar">
+          <div class="profile-avatar-initials">CT</div>
         </div>
         <div class="profile-body">
           <h3 class="profile-name">Chadwick Teate</h3>
