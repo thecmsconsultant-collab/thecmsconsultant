@@ -8,7 +8,7 @@
 <style>
     :root {
         --bg-dark: #0d1117;
-        --bg-light: #f5f7fa;
+        --bg-section: #11161d;
         --text-light: #e6e6e6;
         --text-muted: #9ca3af;
         --accent: #3b82f6;
@@ -20,13 +20,14 @@
     body {
         margin: 0;
         font-family: system-ui, sans-serif;
-        background: var(--bg-dark);
+        background: var(--bg-dark); /* FIX: removes GitHub grey */
         color: var(--text-light);
         line-height: 1.6;
     }
 
     /* HERO */
     .hero {
+        background: var(--bg-dark); /* FIX: dark hero */
         padding: 120px 20px;
         text-align: center;
         max-width: 900px;
@@ -37,6 +38,7 @@
         font-size: 3rem;
         font-weight: 700;
         margin-bottom: 20px;
+        color: #fff;
     }
 
     .hero p {
@@ -64,9 +66,11 @@
 
     /* SECTIONS */
     section {
+        background: var(--bg-section); /* FIX: dark section blocks */
         padding: 80px 20px;
         max-width: 1000px;
-        margin: 0 auto;
+        margin: 0 auto 40px auto;
+        border-radius: var(--radius);
     }
 
     section h2 {
@@ -106,106 +110,40 @@
 
 <body>
 
-<!-- HERO -->
 <div class="hero">
     <h1>WordPress that works — faster, safer, and built to grow your business</h1>
-    <p>I fix, optimize, and scale WordPress sites for teams that need clarity, speed, and reliability. No jargon. No guesswork. Just calm, expert guidance and hands‑on implementation.</p>
+    <p>I fix, optimize, and scale WordPress sites for teams that need clarity, speed, and reliability.</p>
     <a href="mailto:contact@thecmsconsultant.org" class="btn">Contact Me</a>
 </div>
 
-<!-- SERVICES -->
 <section>
     <h2>What I Do</h2>
     <div class="grid">
-        <div class="card">
-            <h3>Technical Troubleshooting</h3>
-            <p>Diagnose and resolve plugin, theme, REST API, and hosting conflicts.</p>
-        </div>
-        <div class="card">
-            <h3>Performance & Core Web Vitals</h3>
-            <p>Clean up bloat, optimize queries, and improve real‑world load times.</p>
-        </div>
-        <div class="card">
-            <h3>Security & Infrastructure</h3>
-            <p>SSL, DNS, permissions, and hardening for boringly reliable uptime.</p>
-        </div>
-        <div class="card">
-            <h3>Site Audits & Architecture</h3>
-            <p>Map your ecosystem, identify risks, and design a cleaner structure.</p>
-        </div>
-        <div class="card">
-            <h3>Custom Tools & Dashboards</h3>
-            <p>Build calculators, CRMs, dashboards, and internal tools inside WordPress.</p>
-        </div>
-        <div class="card">
-            <h3>Ongoing Support</h3>
-            <p>Structured updates, monitoring, and a trusted point of contact.</p>
-        </div>
+        <div class="card"><h3>Technical Troubleshooting</h3><p>Diagnose and resolve plugin, theme, REST API, and hosting conflicts.</p></div>
+        <div class="card"><h3>Performance & Core Web Vitals</h3><p>Clean up bloat, optimize queries, and improve real‑world load times.</p></div>
+        <div class="card"><h3>Security & Infrastructure</h3><p>SSL, DNS, permissions, and hardening for boringly reliable uptime.</p></div>
+        <div class="card"><h3>Site Audits & Architecture</h3><p>Map your ecosystem, identify risks, and design a cleaner structure.</p></div>
+        <div class="card"><h3>Custom Tools & Dashboards</h3><p>Build calculators, CRMs, dashboards, and internal tools inside WordPress.</p></div>
+        <div class="card"><h3>Ongoing Support</h3><p>Structured updates, monitoring, and a trusted point of contact.</p></div>
     </div>
 </section>
 
-<!-- WHY WORK WITH ME -->
-<section>
-    <h2>Why Work With Me</h2>
-    <div class="grid">
-        <div class="card">
-            <h3>Clarity First</h3>
-            <p>Clear language, visible progress, and decisions you can explain to your team.</p>
-        </div>
-        <div class="card">
-            <h3>Experienced</h3>
-            <p>10+ years in WordPress with a systems‑minded approach.</p>
-        </div>
-        <div class="card">
-            <h3>Privacy‑Aware</h3>
-            <p>Honest, transparent architecture with no unnecessary tracking.</p>
-        </div>
-        <div class="card">
-            <h3>Collaborative</h3>
-            <p>We build together — not a black‑box developer relationship.</p>
-        </div>
-    </div>
-</section>
-
-<!-- PROJECTS -->
 <section>
     <h2>Recent Projects</h2>
     <div class="grid">
-        <div class="card">
-            <h3>RideIncomeCalculator.org</h3>
-            <p>Income clarity for gig drivers with a custom calculator and secure data handling.</p>
-        </div>
-        <div class="card">
-            <h3>MyGoalManager.me</h3>
-            <p>Privacy‑first goal tracking with Free/Pro gating and PayPal integration.</p>
-        </div>
-        <div class="card">
-            <h3>MyKnowledgeEngine.me</h3>
-            <p>Modular personal knowledge dashboard with an OS‑style interface.</p>
-        </div>
+        <div class="card"><h3>RideIncomeCalculator.org</h3><p>Income clarity for gig drivers with a custom calculator and secure data handling.</p></div>
+        <div class="card"><h3>MyGoalManager.me</h3><p>Privacy‑first goal tracking with Free/Pro gating and PayPal integration.</p></div>
+        <div class="card"><h3>MyKnowledgeEngine.me</h3><p>Modular personal knowledge dashboard with an OS‑style interface.</p></div>
     </div>
 </section>
 
-<!-- PROCESS -->
 <section>
     <h2>How We Work Together</h2>
     <div class="grid">
-        <div class="card">
-            <h3>1. Discovery Call</h3>
-            <p>Understand your goals and current challenges.</p>
-        </div>
-        <div class="card">
-            <h3>2. Technical Audit</h3>
-            <p>Identify issues, risks, and opportunities.</p>
-        </div>
-        <div class="card">
-            <h3>3. Implementation</h3>
-            <p>Fixes, builds, or redesigns — done cleanly and transparently.</p>
-        </div>
-        <div class="card">
-            <h3>4. Delivery</h3>
-            <p>Documented, stable, and optimized for long‑term use.</p>
-        </div>
+        <div class="card"><h3>1. Discovery Call</h3><p>Understand your goals and current challenges.</p></div>
+        <div class="card"><h3>2. Technical Audit</h3><p>Identify issues, risks, and opportunities.</p></div>
+        <div class="card"><h3>3. Implementation</h3><p>Fixes, builds, or redesigns — done cleanly and transparently.</p></div>
+        <div class="card"><h3>4. Delivery</h3><p>Documented, stable, and optimized for long‑term use.</p></div>
     </div>
 </section>
 
