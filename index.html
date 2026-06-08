@@ -4,81 +4,110 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>The CMS Consultant</title>
+
     <style>
+        :root {
+            --primary: #0a84ff;
+            --text: #222;
+            --subtext: #555;
+            --bg: #f7f9fc;
+            --card-bg: #fff;
+            --radius: 10px;
+            --shadow: 0 4px 14px rgba(0,0,0,0.08);
+        }
+
         body {
             margin: 0;
             font-family: system-ui, sans-serif;
-            color: #222;
-            background: #fafafa;
+            background: var(--bg);
+            color: var(--text);
             line-height: 1.6;
         }
-        header {
-            padding: 60px 20px;
-            text-align: center;
-            background: #ffffff;
-            border-bottom: 1px solid #eee;
-        }
-        header h1 {
-            font-size: 2.4rem;
-            margin-bottom: 10px;
-        }
-        header p {
-            max-width: 700px;
-            margin: 0 auto;
-            font-size: 1.1rem;
-            color: #555;
-        }
-        section {
-            padding: 60px 20px;
+
+        .container {
             max-width: 900px;
             margin: 0 auto;
+            padding: 40px 20px;
         }
+
+        header {
+            text-align: center;
+            padding: 80px 20px;
+            background: #fff;
+            border-bottom: 1px solid #eee;
+        }
+
+        header h1 {
+            font-size: 2.8rem;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+
+        header p {
+            max-width: 650px;
+            margin: 0 auto;
+            font-size: 1.2rem;
+            color: var(--subtext);
+        }
+
+        .btn {
+            display: inline-block;
+            margin-top: 25px;
+            padding: 14px 26px;
+            background: var(--primary);
+            color: #fff;
+            border-radius: var(--radius);
+            text-decoration: none;
+            font-weight: 600;
+            transition: 0.2s;
+        }
+
+        .btn:hover {
+            background: #006fe0;
+        }
+
         h2 {
-            font-size: 1.8rem;
-            margin-bottom: 20px;
+            font-size: 2rem;
+            margin-bottom: 25px;
+            text-align: center;
         }
-        .services, .projects, .process {
+
+        .grid {
             display: grid;
             gap: 25px;
         }
+
         .card {
-            background: #fff;
+            background: var(--card-bg);
             padding: 25px;
-            border-radius: 8px;
-            border: 1px solid #eee;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
         }
+
+        .card h3 {
+            margin-top: 0;
+        }
+
         footer {
             text-align: center;
             padding: 40px 20px;
-            color: #777;
+            color: var(--subtext);
             font-size: 0.9rem;
-        }
-        .contact-btn {
-            display: inline-block;
-            margin-top: 20px;
-            padding: 12px 22px;
-            background: #0078ff;
-            color: #fff;
-            border-radius: 6px;
-            text-decoration: none;
-            font-weight: 600;
-        }
-        .contact-btn:hover {
-            background: #005fcc;
         }
     </style>
 </head>
+
 <body>
 
 <header>
     <h1>The CMS Consultant</h1>
     <p>WordPress that works — faster, safer, and easier to manage. I help site owners fix problems, optimize performance, and build stable, scalable setups that stay out of your way.</p>
-    <a href="mailto:contact@thecmsconsultant.org" class="contact-btn">Contact Me</a>
+    <a href="mailto:contact@thecmsconsultant.org" class="btn">Contact Me</a>
 </header>
 
-<section>
+<div class="container">
     <h2>Services</h2>
-    <div class="services">
+    <div class="grid">
         <div class="card">
             <h3>Performance Optimization</h3>
             <p>Speed tuning, caching, cleanup, and hosting improvements to make your WordPress site load fast and run smoothly.</p>
@@ -96,11 +125,11 @@
             <p>Repair corrupted installs, restore backups, rebuild damaged sites, and get you back online quickly.</p>
         </div>
     </div>
-</section>
+</div>
 
-<section>
+<div class="container">
     <h2>Recent Projects</h2>
-    <div class="projects">
+    <div class="grid">
         <div class="card">
             <h3>WordPress Cleanup & Optimization</h3>
             <p>Improved load times, reduced plugin bloat, and stabilized a high‑traffic site suffering from slowdowns.</p>
@@ -114,11 +143,11 @@
             <p>Helped a client debug and stabilize a custom plugin that was causing admin crashes.</p>
         </div>
     </div>
-</section>
+</div>
 
-<section>
+<div class="container">
     <h2>How I Work</h2>
-    <div class="process">
+    <div class="grid">
         <div class="card">
             <h3>1. Assess</h3>
             <p>I review your site, identify issues, and outline a clear plan of action.</p>
@@ -132,7 +161,7 @@
             <p>Once everything is stable, I provide guidance to help you maintain a clean, reliable setup.</p>
         </div>
     </div>
-</section>
+</div>
 
 <footer>
     © The CMS Consultant — WordPress Optimization & Troubleshooting
