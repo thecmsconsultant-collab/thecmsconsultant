@@ -741,6 +741,70 @@ footer {
   color: var(--mid);
 }
 
+/* ─── CONTACT ─── */
+.contact-section {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 48px 120px;
+}
+
+.contact-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+  background: white;
+  border-radius: 32px;
+  border: 1px solid var(--border);
+  padding: 80px;
+  box-shadow: 0 4px 40px rgba(0,0,0,0.06);
+}
+
+.contact-left .section-eyebrow { margin-bottom: 16px; }
+
+.contact-body {
+  font-size: 1rem;
+  color: var(--mid);
+  line-height: 1.7;
+  font-weight: 300;
+  margin-top: 20px;
+  max-width: 400px;
+}
+
+.contact-right {
+  display: flex;
+  justify-content: center;
+}
+
+.gravatar-card {
+  width: 100%;
+  border-radius: 20px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  box-shadow: 0 2px 24px rgba(0,0,0,0.06);
+  background: var(--cream);
+  min-height: 480px;
+}
+
+.gravatar-card iframe {
+  width: 100%;
+  height: 480px;
+  border: none;
+  display: block;
+}
+
+@media (max-width: 1024px) {
+  .contact-section { padding: 0 24px 80px; }
+  .contact-inner { grid-template-columns: 1fr; gap: 48px; padding: 48px; }
+}
+
+@media (max-width: 640px) {
+  .contact-section { padding: 0 20px 80px; }
+  .contact-inner { padding: 32px 24px; }
+  .gravatar-card { min-height: 420px; }
+  .gravatar-card iframe { height: 420px; }
+}
+
 /* ─── ANIMATIONS ─── */
 .fade-up {
   opacity: 0;
@@ -794,7 +858,7 @@ footer {
     <li><a href="#services">Services</a></li>
     <li><a href="#process">Process</a></li>
     <li><a href="#about">About</a></li>
-    <li><a href="mailto:contact@thecmsconsultant.org" class="nav-cta">Book a Call</a></li>
+    <li><a href="#contact" class="nav-cta">Book a Call</a></li>
   </ul>
 </nav>
 
@@ -807,7 +871,7 @@ footer {
       Troubleshooting, performance, security, and custom development for WordPress sites of every scale. 15+ years of expertise on demand.
     </p>
     <div class="hero-actions">
-      <a href="mailto:contact@thecmsconsultant.org" class="btn-primary">
+      <a href="#contact" class="btn-primary">
         Book a Free Consultation
         <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
       </a>
@@ -1019,11 +1083,39 @@ footer {
       <p class="cta-subtitle">Book a free 30-minute consultation. No commitment, no pitch — just a candid look at your situation and what's possible.</p>
     </div>
     <div class="cta-right">
-      <a href="mailto:contact@thecmsconsultant.org" class="btn-light">Book a Free Call</a>
+      <a href="#contact" class="btn-light">Book a Free Call</a>
       <span class="cta-note">Typically responds within 24 hours</span>
     </div>
   </div>
 </div>
+
+<!-- CONTACT -->
+<section class="contact-section" id="contact">
+  <div class="contact-inner">
+    <div class="contact-left fade-up">
+      <div class="section-eyebrow">Get In Touch</div>
+      <h2>Let's talk about<br>your WordPress site</h2>
+      <p class="contact-body">
+        Whether you're dealing with a broken site, a slow one, or just planning ahead — reach out and let's figure out the best path forward together.
+      </p>
+      <a href="mailto:contact@thecmsconsultant.org" class="btn-primary" style="margin-top: 32px;">
+        Send an Email
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+    </div>
+    <div class="contact-right fade-up">
+      <div class="gravatar-card">
+        <iframe
+          src="https://gravatar.com/chadteate"
+          title="Chad Teate – Gravatar Profile"
+          scrolling="no"
+          frameborder="0"
+          loading="lazy">
+        </iframe>
+      </div>
+    </div>
+  </div>
+</section>
 
 <!-- FOOTER -->
 <footer>
@@ -1032,7 +1124,7 @@ footer {
     <li><a href="#services">Services</a></li>
     <li><a href="#process">Process</a></li>
     <li><a href="#about">About</a></li>
-    <li><a href="mailto:contact@thecmsconsultant.org">Contact</a></li>
+    <li><a href="#contact">Contact</a></li>
   </ul>
   <span class="footer-copy">© 2026 The CMS Consultant</span>
 </footer>
